@@ -1,6 +1,8 @@
 let humanScore = 0;
 let computerScore = 0;
 
+alert("Welcome to the Game: Rock Paper Scissors");
+console.log("Welcome to the Game: Rock Paper Scissors");
 
 // Get a random choice from the computer from - "Rock" or "Paper" or "Scissors".
 function getComputerChoice() {
@@ -44,31 +46,31 @@ function playRound(humanChoice, computerChoice) {
 
     if (newHumanChoice==="ROCK" && newComputerChoice==="SCISSORS") {
         alert("You won! Rock beats scissors");
-        console.log("You won! Rock beats scissors");
+        console.log("RESULT: You won! Rock beats scissors");
         humanScore++;
     } else if (newHumanChoice==="PAPER" && newComputerChoice==="ROCK") {
         alert("You won! Paper beats rock");
-        console.log("You won! Paper beats rock");
+        console.log("RESULT: You won! Paper beats rock");
         humanScore++;
     } else if (newHumanChoice==="SCISSORS" && newComputerChoice==="PAPER") {
         alert("You won! Scissors beats paper");
-        console.log("You won! Scissors beats paper");
+        console.log("RESULT: You won! Scissors beats paper");
         humanScore++;
     } else if (newHumanChoice==="ROCK" && newComputerChoice==="PAPER") {
         alert("You lost! Paper beats rock");
-        console.log("You lost! Paper beats rock");
+        console.log("RESULT: You lost! Paper beats rock");
         computerScore++;
     } else if (newHumanChoice==="SCISSORS" && newComputerChoice==="ROCK") {
         alert("You lost! Rock beats Scissors");
-        console.log("You lost! Rock beats Scissors");
+        console.log("RESULT: You lost! Rock beats Scissors");
         computerScore++;
     } else if (newHumanChoice==="PAPER" && newComputerChoice==="SCISSORS") {
         alert("You lost! Scissors beats paper");
-        console.log("You lost! Scissors beats paper");
+        console.log("RESULT: You lost! Scissors beats paper");
         computerScore++;
     } else if (newHumanChoice===newComputerChoice) {
         alert("It's a draw.");
-        console.log("It's a draw.");
+        console.log("RESULT: It's a draw.");
         computerScore++;
         humanScore++;
     }
@@ -78,6 +80,8 @@ function playRound(humanChoice, computerChoice) {
 
 function playGame() {
     for (let i = 0; i < 5; i++) {
+        alert("Round "+(i+1));
+        console.log("-------Round "+(i+1)+"---------");
         const humanSelection = getHumanChoice();    // Store humanChoice
         const computerSelection = getComputerChoice();  // Store computerChoice
         playRound(humanSelection, computerSelection);
@@ -86,10 +90,13 @@ function playGame() {
     console.log(`Computer Score: ${computerScore}`);
     if (humanScore > computerScore) {
         alert("You Won the match!");
+        console.log("RESULT: You Won the match!");
     } else if (computerScore > humanScore) {
         alert("Computer Wins! You lose!");
+        console.log("RESULT: Computer Wins! You lose!");
     } else {
         alert("It's a draw");
+        console.log("RESULT: It's a draw");
     }
 }
 
