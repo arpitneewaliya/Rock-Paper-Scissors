@@ -1,18 +1,21 @@
-let humanScore = 0;
-let computerScore = 0;
+let humanScore = 0, computerScore=0;
 
-alert("Welcome to the Game: Rock Paper Scissors");
 console.log("Welcome to the Game: Rock Paper Scissors");
+alert("Welcome to the Game: Rock Paper Scissors");
+
+
 
 // Get a random choice from the computer from - "Rock" or "Paper" or "Scissors".
 function getComputerChoice() {
     let computerChoice;
-    // Generate a random natural number using "Math.random()" between 1 and 100.
-    let randomNumber = Math.floor(Math.random()*100)+1;
-    // Generate a random choice by using random numbers.
-    if (randomNumber <= 33) {
+
+    // Create a random number: 1, 2, or 3.
+    let randomNumber = Math.floor(Math.random()*3)+1;
+
+    // Select "Rock", "Paper" or "Scissors" based on the randomNumber.
+    if (randomNumber === 1) {
         computerChoice = "Rock";
-    } else if (randomNumber > 33 && randomNumber <= 66) {
+    } else if (randomNumber === 2) {
         computerChoice = "Paper";
     } else {
         computerChoice = "Scissors";
