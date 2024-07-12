@@ -20,24 +20,6 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-
-
-// Get the choice of the user.
-// function getHumanChoice() {
-//     let humanChoice = prompt("Enter your choice (Rock/Paper/Scissors):", '');
-//     // Capitallize the choice to ensure case-insensitivity.
-//     let newHumanChoice = humanChoice.toUpperCase();
-//     // Check if the user entered the valid choice.
-//     if (newHumanChoice==="ROCK" || newHumanChoice==="PAPER" || newHumanChoice==="SCISSORS") {
-//         console.log("Your choice was: "+newHumanChoice);
-//         return newHumanChoice;
-//     } else {
-//         alert("Invalid Choice! Try again!");
-//         getHumanChoice();   //Call the function again.
-//     }
-// }
-
-
 function callPlayRound(hChoice) {
     while ((humanScore<5) && (computerScore<5)) {
         playRound(hChoice, getComputerChoice());
@@ -112,30 +94,3 @@ scissors.addEventListener('click', () => {
     humanChoose = 'scissors';
     callPlayRound(humanChoose);
 });
-
-
-
-// function playGame() {
-//     for (let i = 0; i < 5; i++) {
-//         alert("Round "+(i+1));
-//         console.log("-------Round "+(i+1)+"---------");
-//         const humanSelection = getHumanChoice();    // Store humanChoice
-//         const computerSelection = getComputerChoice();  // Store computerChoice
-//         playRound(humanSelection, computerSelection);
-//     }
-//     console.log(`Your Score: ${humanScore}`);
-//     console.log(`Computer Score: ${computerScore}`);
-//     if (humanScore > computerScore) {
-//         alert("You Won the match!");
-//         console.log("RESULT: You Won the match!");
-//     } else if (computerScore > humanScore) {
-//         alert("Computer Wins! You lose!");
-//         console.log("RESULT: Computer Wins! You lose!");
-//     } else {
-//         alert("It's a draw");
-//         console.log("RESULT: It's a draw");
-//     }
-// }
-
-
-// playGame();
